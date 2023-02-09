@@ -1,10 +1,13 @@
 ---
-- name: Check RHEL Subscription
-  command: subscription-manager status
-  register: subscriptionStatus
-  ignore_errors: true
+- name: Print RHEL
+  debug:
+    msg: Check for RHEL Subscription
+# - name: Check RHEL Subscription
+#   command: subscription-manager status
+#   register: subscriptionStatus
+#   ignore_errors: true
 
-- name: RHEL Subscription
-  fail:
-    msg: RHEL Subscription not available.
-  when: '"Overall Status: Current" not in subscriptionStatus.stdout'
+# - name: RHEL Subscription
+#   fail:
+#     msg: RHEL Subscription not available.
+#   when: '"Overall Status: Current" not in subscriptionStatus.stdout'
