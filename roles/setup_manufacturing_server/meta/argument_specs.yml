@@ -17,3 +17,9 @@ argument_specs:
           - Fdo directory path.
         type: str
         default: /etc/fdo
+      manufacturing_server_generate_keys_and_certificates:
+        description:
+          - Whether FDO keys and certificates should be automatically generated on the manufacturing host.
+        type: bool
+        required: false
+        default: true
